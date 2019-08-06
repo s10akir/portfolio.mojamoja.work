@@ -1,0 +1,91 @@
+<template>
+  <div>
+    <h1 class="display-2 font-weight-medium teal--text">Hello My World</h1>
+    <div class="my-3">
+      <h2 class="headline font-weight-medium">$ whoami</h2>
+      <p class="body-1 font-weight-light">
+        都内の専門学校に通う情報系学生です。システム開発を専攻しています。
+      </p>
+    </div>
+    <div class="my-3">
+      <h2 class="headline font-weight-medium">$ vision</h2>
+      <v-card
+        v-for="vision in visions"
+        :key="vision.id"
+        class="my-2"
+      >
+        <v-card-title>{{ vision.title }}</v-card-title>
+        <v-card-text>{{ vision.text }}</v-card-text>
+      </v-card>
+    </div>
+    <div class="my-3">
+      <h2 class="headline font-weight-medium">$ certifications</h2>
+      <v-simple-table class="my-2">
+        <tbody>
+          <tr v-for="item in certs" :key="item.date">
+            <td>{{ item.date }}</td>
+            <td>{{ item.name }}</td>
+          </tr>
+        </tbody>
+      </v-simple-table>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Profile',
+  data: function () {
+    return {
+      visions: [
+        {
+          title: "言われたコトだけじゃ満足できない",
+          text: "「私じゃなきゃできない」価値を突き詰めたい。ただ開発するだけじゃなくエンジニアへも積極的に意見を求められる、意義ある世界を目指しています。"
+        },
+        {
+          title: "最前線で戦い続けるエンジニアでいたい",
+          text: "常に新しいモノに触れていたい。新しい技術を追い求めていたい。"
+        },
+        {
+          title: "フルスタックな仕事がしたい",
+          text: "様々な分野の技術に触れていたい。知らない世界を知ることで得られるモノを探し続けたい。"
+        },
+      ],
+      certs: [
+        {
+          date: '2017.03',
+          name: 'ITパスポート試験'
+        },
+        {
+          date: '2017.09',
+          name: 'Microsoft Office Specialist Word 2013'
+        },
+        {
+          date: '2017.11',
+          name: '基本情報技術者試験'
+        },
+        {
+          date: '2018.02',
+          name: 'Microsoft Office Specialist Excel 2013'
+        },
+        {
+          date: '2018.06',
+          name: '応用情報技術者試験'
+        },
+        {
+          date: '2018.12',
+          name: '情報処理安全確保支援士試験'
+        },
+        {
+          date: '2019.04',
+          name: '情報処理安全確保支援士 登録 （登録番号: 018283）'
+        },
+      ]
+    }
+  }
+}
+</script>
+
+<style scoped lang="sass">
+
+</style>
