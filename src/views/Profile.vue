@@ -13,8 +13,8 @@
         v-for="vision in visions"
         :key="vision.id"
         class="my-2"
-      >
-        <v-card-title>{{ vision.title }}</v-card-title>
+        >
+        <v-card-title><v-icon color="teal">{{ vision.icon }}</v-icon>{{ vision.title }}</v-card-title>
         <v-card-text>{{ vision.text }}</v-card-text>
       </v-card>
     </div>
@@ -39,16 +39,19 @@ export default {
     return {
       visions: [
         {
-          title: "言われたコトだけじゃ満足できない",
-          text: "「私じゃなきゃできない」価値を突き詰めたい。ただ開発するだけじゃなくエンジニアへも積極的に意見を求められる、意義ある世界を目指しています。"
+          icon: 'mdi-flash',
+          title: '言われたコトだけじゃ満足できない',
+          text: '「私じゃなきゃできない」価値を突き詰めたい。ただ開発するだけじゃなくエンジニアへも積極的に意見を求められる、意義ある仕事を目指しています。'
         },
         {
-          title: "最前線で戦い続けるエンジニアでいたい",
-          text: "常に新しいモノに触れていたい。新しい技術を追い求めていたい。"
+          icon: 'mdi-arrow-up-bold-hexagon-outline',
+          title: '最前線で戦い続けるエンジニアでいたい',
+          text: '常に新しいモノに触れていたい。新しい技術を追い求めていたい。'
         },
         {
-          title: "フルスタックな仕事がしたい",
-          text: "様々な分野の技術に触れていたい。知らない世界を知ることで得られるモノを探し続けたい。"
+          icon: 'mdi-creation',
+          title: 'フルスタックな仕事がしたい',
+          text: '様々な分野の技術に触れていたい。知らない世界を知ることで得られるモノを探し続けたい。'
         },
       ],
       certs: [
