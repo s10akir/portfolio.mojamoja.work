@@ -14,13 +14,13 @@
       <v-btn block elevation="0" color="teal" to="/" exact>Profile</v-btn>
     </div>
     <div class="my-2">
-      <v-btn block elevation="0" color="teal" to="/about" exact>About</v-btn>
-    </div>
-    <div class="my-2">
       <v-btn block elevation="0" color="teal" to="/skills" exact>Skills</v-btn>
     </div>
     <div class="my-2">
       <v-btn block elevation="0" color="teal" to="/activity" exact>Activity</v-btn>
+    </div>
+    <div class="my-2">
+      <v-btn block elevation="0" color="teal" to="/about" exact>About</v-btn>
     </div>
   </div>
 </template>
