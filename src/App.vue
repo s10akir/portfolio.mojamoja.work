@@ -3,10 +3,12 @@
     <v-content>
       <v-container fluid ma-0 pa-0>
         <v-layout>
-          <v-flex md4 id="sidebar" pa-4 teal darken-2>
+          <transition>
+          <v-flex id="sidebar" md4 sm4 hidden-xs-only :class="color" px-4 py-12>
             <sidebar />
           </v-flex>
-          <v-flex md8>
+          </transition>
+          <v-flex id="main" md8 sm8 xs12 pa-12>
             <router-view></router-view>
           </v-flex>
         </v-layout>
@@ -25,6 +27,7 @@ export default {
   },
   data: () => ({
     //
+    color: "teal darker-1"
   }),
 };
 </script>
@@ -32,4 +35,8 @@ export default {
 <style scoped lang="sass">
 #sidebar
   height: 100vh
+
+#main
+  height: 100vh
+  overflow: auto
 </style>
