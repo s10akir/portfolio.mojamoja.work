@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar">
+  <div class="sidebar white--text">
     <v-avatar class="my-2" size="40%">
       <v-img
         :src="require('../assets/avatar.jpg')"
@@ -10,17 +10,8 @@
       <p class="body-1">1998-10-02</p>
     </div>
 
-    <div class="my-2">
-      <v-btn block elevation="0" color="teal" to="/" exact>Profile</v-btn>
-    </div>
-    <div class="my-2">
-      <v-btn block elevation="0" color="teal" to="/skills" exact>Skills</v-btn>
-    </div>
-    <div class="my-2">
-      <v-btn block elevation="0" color="teal" to="/activity" exact>Activity</v-btn>
-    </div>
-    <div class="my-2">
-      <v-btn block elevation="0" color="teal" to="/about" exact>About</v-btn>
+    <div class="my-2" v-for="link in links" :key="link.id">
+      <v-btn block class="white--text" elevation="0" color="teal" :to="link.path" exact>{{ link.title }}</v-btn>
     </div>
     <div class="bubbles">
       <div class="bubble" />
@@ -34,7 +25,29 @@
 
 <script>
 export default {
-  name: 'SideBar'
+  name: 'SideBar',
+  data: function() {
+    return {
+      links: [
+        {
+          title: 'Profile',
+          path: '/'
+        },
+        {
+          title: 'Skills',
+          path: '/skills'
+        },
+        {
+          title: 'Activity',
+          path: '/activity'
+        },
+        {
+          title: 'About',
+          path: '/about'
+        },
+      ]
+    }
+  },
 }
 </script>
 
