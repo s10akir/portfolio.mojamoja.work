@@ -14,7 +14,7 @@
         :key="vision.id"
         class="my-2"
         >
-        <v-card-title><v-icon color="teal">{{ vision.icon }}</v-icon>{{ vision.title }}</v-card-title>
+        <v-card-title><v-icon color="teal" class="mx-2">{{ vision.icon }}</v-icon>{{ vision.title }}</v-card-title>
         <v-card-text>{{ vision.text }}</v-card-text>
       </v-card>
     </div>
