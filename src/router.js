@@ -13,6 +13,11 @@ export default new Router({
       component: () => import('./views/Profile.vue')
     },
     {
+      path: '/skills',
+      name: 'skils',
+      component: () => import('./views/Skills.vue')
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
