@@ -34,7 +34,10 @@ export default {
 };
 </script>
 
-<style scoped lang="sass">
+<style lang="sass">
+html
+  overflow-y: visible !important
+
 #sidebar
   height: 100vh
 
