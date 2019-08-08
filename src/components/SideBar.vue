@@ -6,8 +6,8 @@
       />
     </v-avatar>
     <div class="my-2">
-      <h1 class="display-1">Akira Shinohara</h1>
-      <p class="body-1">1998-10-02</p>
+      <h1 class="display-1">moja-portfolio</h1>
+      <p class="body-1">portfolio.mojamoja.work</p>
     </div>
 
     <div class="my-2" v-for="link in links" :key="link.id">
