@@ -51,6 +51,7 @@ export default {
         {
           title: 'Twitter',
           text: '事実上の日記。',
+          link: 'https://twitter.com/s10akir'
         },
       ]
     }
