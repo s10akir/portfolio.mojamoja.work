@@ -2,24 +2,31 @@
   <div>
     <h1 class="display-2 font-weight-medium teal--text">Hello My World</h1>
     <div class="my-3">
-      <h2 class="headline font-weight-medium">$ whoami</h2>
-      <p class="body-1 font-weight-light">
+      <h2 class="title">自己紹介</h2>
+      <p class="body-1">
         都内の専門学校に通う情報系学生です。システム開発を専攻しています。
       </p>
     </div>
     <div class="my-3">
-      <h2 class="headline font-weight-medium">$ vision</h2>
+      <h2 class="title">将来像</h2>
       <v-card
         v-for="vision in visions"
         :key="vision.id"
         class="my-2"
         >
-        <v-card-title><v-icon color="teal" class="mx-2">{{ vision.icon }}</v-icon>{{ vision.title }}</v-card-title>
+        <v-card-title>
+          <span>
+            <v-icon color="teal" class="mx-2">
+              {{ vision.icon }}
+            </v-icon>
+            {{ vision.title }}
+          </span>
+        </v-card-title>
         <v-card-text>{{ vision.text }}</v-card-text>
       </v-card>
     </div>
     <div class="my-3">
-      <h2 class="headline font-weight-medium">$ certifications</h2>
+      <h2 class="title">資格</h2>
       <v-simple-table class="my-2">
         <tbody>
           <tr v-for="item in certs" :key="item.date">
