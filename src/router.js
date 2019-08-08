@@ -18,6 +18,11 @@ export default new Router({
       component: () => import('./views/Skills.vue')
     },
     {
+      path: '/activity',
+      name: 'activity',
+      component: () => import('./views/Activity.vue')
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
