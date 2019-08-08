@@ -6,38 +6,30 @@
           <v-flex id="sidebar" md4 sm4 hidden-xs-only :class="color" px-4 py-12>
             <sidebar />
           </v-flex>
-          <v-flex xs12 hidden-sm-and-up>
-            <v-toolbar class="px-0">
-              <v-container fluid>
-                <v-layout>
-                  <v-flex xs4>
-                    <v-btn text class="white--text" color="teal" to="/">
-                      <v-icon>mdi-account</v-icon>
-                    </v-btn>
-                  </v-flex>
-                  <v-flex xs4>
-                    <v-btn text class="white--text" color="teal" to="/skills">
-                      <v-icon>mdi-math-compass</v-icon>
-                    </v-btn>
-                  </v-flex>
-                  <v-flex xs4>
-                    <v-btn text class="white--text" color="teal" to="/activity">
-                      <v-icon>mdi-shoe-print</v-icon>
-                    </v-btn>
-                  </v-flex>
-                  <v-flex xs4>
-                    <v-btn text class="white--text" color="teal" to="/about">
-                      <v-icon>mdi-file-document</v-icon>
-                    </v-btn>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-toolbar>
-          </v-flex>
           <v-flex id="main" md8 sm8 xs12 pa-12>
             <transition mode="out-in">
               <router-view />
             </transition>
+            <v-flex xs12 hidden-sm-and-up>
+              <v-bottom-navigation fixed hidden-sm-and-up>
+                <v-btn text color="teal" to="/" exact>
+                  <span>Profile</span>
+                  <v-icon>mdi-account</v-icon>
+                </v-btn>
+                <v-btn text color="teal" to="/skills" exact>
+                  <span>Skills</span>
+                  <v-icon>mdi-math-compass</v-icon>
+                </v-btn>
+                <v-btn text color="teal" to="/activity" exact>
+                  <span>Acitivity</span>
+                  <v-icon>mdi-shoe-print</v-icon>
+                </v-btn>
+                <v-btn text color="teal" to="/about" exact>
+                  <span>About</span>
+                  <v-icon>mdi-file-document</v-icon>
+                </v-btn>
+              </v-bottom-navigation>
+            </v-flex>
           </v-flex>
         </v-layout>
       </v-container>
@@ -63,6 +55,13 @@ export default {
 <style lang="sass">
 html
   overflow-y: visible !important
+
+// power play
+#nav
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 100
 
 #sidebar
   height: 100vh
