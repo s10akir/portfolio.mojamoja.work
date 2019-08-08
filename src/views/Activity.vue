@@ -49,7 +49,7 @@ export default {
           link: 'https://github.com/s10akir'
         },
         {
-          title: 'twitter',
+          title: 'Twitter',
           text: '事実上の日記。',
         },
       ]
