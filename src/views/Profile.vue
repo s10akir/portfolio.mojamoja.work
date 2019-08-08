@@ -3,8 +3,11 @@
     <h1 class="display-2 font-weight-medium teal--text">Hello My World</h1>
     <div class="my-3">
       <h2 class="title">自己紹介</h2>
+      <h3 class="font-weight-bold teal--text">Akira Shinohara - 1998/10/02</h3>
       <p class="body-1">
         都内の専門学校に通う情報系学生です。システム開発を専攻しています。
+        <br>
+        contact: k017c1067(at)it-neec.jp
       </p>
     </div>
     <div class="my-3">
@@ -15,7 +18,7 @@
         class="my-2"
         >
         <v-card-title>
-          <span>
+          <span class="teal--text">
             <v-icon color="teal" class="mx-2">
               {{ vision.icon }}
             </v-icon>
