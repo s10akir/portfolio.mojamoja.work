@@ -10,9 +10,3 @@ new Vue({
   vuetify,
   render: h => h(App)
 }).$mount('#app')
-
-export default new vuetify({
-  icons: {
-    iconfont: 'mdiSvg',
-  },
-})
